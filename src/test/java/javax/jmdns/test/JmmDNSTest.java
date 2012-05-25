@@ -2,11 +2,11 @@ package javax.jmdns.test;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
-import static org.easymock.EasyMock.capture;
+// import static org.easymock.EasyMock.capture;
 import static org.easymock.EasyMock.createMock;
-import static org.easymock.EasyMock.createNiceMock;
-import static org.easymock.EasyMock.replay;
-import static org.easymock.EasyMock.verify;
+// import static org.easymock.EasyMock.createNiceMock;
+// import static org.easymock.EasyMock.replay;
+// import static org.easymock.EasyMock.verify;
 
 import java.io.IOException;
 import java.util.Enumeration;
@@ -18,13 +18,13 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 import javax.jmdns.JmmDNS;
-import javax.jmdns.ServiceEvent;
+// import javax.jmdns.ServiceEvent;
 import javax.jmdns.ServiceInfo;
-import javax.jmdns.ServiceListener;
+// import javax.jmdns.ServiceListener;
 import javax.jmdns.ServiceTypeListener;
 
-import org.easymock.Capture;
-import org.easymock.EasyMock;
+// import org.easymock.Capture;
+// import org.easymock.EasyMock;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,7 +32,7 @@ public class JmmDNSTest {
 
     @SuppressWarnings("unused")
     private ServiceTypeListener typeListenerMock;
-    private ServiceListener     serviceListenerMock;
+    // private ServiceListener     serviceListenerMock;
     private ServiceInfo         service;
 
     private final static String serviceKey = "srvname"; // Max 9 chars
@@ -56,7 +56,7 @@ public class JmmDNSTest {
         properties.put(serviceKey, text.getBytes());
         service = ServiceInfo.create("_html._tcp.local.", "apache-someuniqueid", 80, 0, 0, true, properties);
         typeListenerMock = createMock(ServiceTypeListener.class);
-        serviceListenerMock = createNiceMock("ServiceListener", ServiceListener.class);
+        // serviceListenerMock = createNiceMock("ServiceListener", ServiceListener.class);
     }
 
     @Test
